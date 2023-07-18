@@ -64,6 +64,9 @@ public class FirstFragment extends Fragment {
                     @Override
                     public void onSuccess(PLPaylinkCallbackData response) {
                         System.out.println("response is: " + response);
+                        System.out.println(response.getTransactionNo());
+                        System.out.println(response.getOrderNumber());
+
                         checkInvoiceInServer(response.getTransactionNo(), new Callback<String, APIError>() {
                             @Override
                             public void onSuccess(String orderStatus) {
