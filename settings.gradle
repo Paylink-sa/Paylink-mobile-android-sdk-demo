@@ -11,8 +11,7 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         maven { url 'https://jitpack.io' }
-        jcenter()
-
+//        mavenCentral()
     }
 }
 rootProject.name = "Testing Paylink SDK Application"

@@ -28,12 +28,13 @@ public class FirstFragment extends Fragment {
     private FragmentFirstBinding binding;
     private final PaylinkGateway paylinkGateway;
     private Context context;
-    private Environment environment;
+    private final Environment environment;
 
     public FirstFragment() {
         this.environment = Environment.TEST;
 
-        this.paylinkGateway = new PaylinkGateway(this.environment);
+        String paymentFormUrl = "https://merchant-website.com/mobile-payment-form.php";
+        this.paylinkGateway = new PaylinkGateway(this.environment, paymentFormUrl, "android");
         this.context = this.getContext();
     }
 
